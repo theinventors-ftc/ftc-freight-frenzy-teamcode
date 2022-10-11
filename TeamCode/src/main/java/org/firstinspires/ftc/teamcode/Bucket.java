@@ -11,7 +11,7 @@ public class Bucket {
     {
         this.toggle = toggle_bucket;
         this.servo = servo;
-        servo.setPosition(1);
+        servo.setPosition(0.87);
         position = 1;
     }
 
@@ -19,10 +19,10 @@ public class Bucket {
     {
         if (toggle.is_bumped()) {
             if (position == 0) {
-                servo.setPosition(1);
+                servo.setPosition(0.87);
                 position = 1;
             } else {
-                servo.setPosition(0);
+                servo.setPosition(0.18);
                 position = 0;
             }
         }
@@ -30,19 +30,19 @@ public class Bucket {
 
     public void set_vertical()
     {
-        servo.setPosition(0.5);
+        servo.setPosition(0.75);
         position = 0.5;
     }
 
     public void set_intake()
     {
-        servo.setPosition(1);
+        servo.setPosition(0.87);
         position = 1;
     }
 
     public void set_release()
     {
-        servo.setPosition(0);
+        servo.setPosition(0.18);
         position = 0;
     }
 }
